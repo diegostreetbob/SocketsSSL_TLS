@@ -144,25 +144,25 @@ if __name__ == '__main__':
 
 Conexión de cliente a servidor, respuesta en el cliente:
 
-![image-20200413073811255](\imagenesP4\image-20200413073811255.png)
+![image-20200413073811255](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413073811255.png)
 
 Respuesta en la consola del servidor:
 
-![image-20200413074235990](\imagenesP4\image-20200413074235990.png)
+![image-20200413074235990](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413074235990.png)
 
 ### Análisis del tráfico capturado
 
 Esta es la captura realizada con *Wireshark*:
 
-![image-20200413074727400](\imagenesP4\image-20200413074727400.png)
+![image-20200413074727400](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413074727400.png)
 
 Línea 102: **Client hello**, en este mensaje, *entre otras cosas*, envía información acerca de la versión *TLS* soportada y las suites criptográficas soportadas.
 
-![image-20200413075320821](\imagenesP4\image-20200413075320821.png)
+![image-20200413075320821](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413075320821.png)
 
 Línea 103: **Server hello**, el servidor contesta con, la versión de *TLS* a usar, suite criptográfica elegida, certificado, clave pública, se usará *Diffie Hellman* para el intercambio de la clave para la parte de criptografía simétrica.
 
-![image-20200413075813769](\imagenesP4\image-20200413075813769.png)
+![image-20200413075813769](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413075813769.png)
 
 Línea 104:
 
@@ -170,19 +170,19 @@ Línea 104:
 * Envía el mensaje del tipo *Change Cipher Spec* para hacerle saber que se va a empezar a intercambiar la información cifrada simétricamente del modo previamente pactado.
 * Finaliza esta esta fase.
 
-![image-20200413080632309](\imagenesP4\image-20200413080632309.png)
+![image-20200413080632309](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413080632309.png)
 
 Línea 105: El servidor envía la clave de sesión única y desde ahora todas los mensajes intercambiados estarán encriptados mediante *AES* y con la clave simétrica intercambiada.
 
-![image-20200413080844613](\imagenesP4\image-20200413080844613.png)
+![image-20200413080844613](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413080844613.png)
 
 Línea 106: el cliente envía mensaje encriptado al servidor.
 
-![image-20200413081332283](\imagenesP4\image-20200413081332283.png)
+![image-20200413081332283](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413081332283.png)
 
 Línea 107: el servidor responde al cliente, el mensaje está encriptado.
 
-![image-20200413081435475](\imagenesP4\image-20200413081435475.png)
+![image-20200413081435475](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413081435475.png)
 
 <div class="page-break"></div>
 
@@ -243,23 +243,23 @@ if __name__ == '__main__':
 
 Lo ejecutamos desde PowerShell con `py -3 server.py` y esto sería lo que nos muestra una vez enviamos el mensaje desde el terminal.
 
-![image-20200413100611196](\imagenesP4\image-20200413100611196.png)
+![image-20200413100611196](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413100611196.png)
 
 ### Análisis de tráfico capturado
 
 Esta es la captura realizada con *Wireshark*:
 
-<img src="\imagenesP4\image-20200413101252821.png" alt="image-20200413101252821" style="zoom:150%;" />
+<img src="https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413101252821.png" alt="image-20200413101252821" style="zoom:150%;" />
 
 Donde  vemos los siguiente:
 
 Línea 17: Cliente envía mensaje a servidor, podemos apreciar que el mensaje enviado es totalmente visible.
 
-![image-20200413101509645](\imagenesP4\image-20200413101509645.png)
+![image-20200413101509645](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413101509645.png)
 
 Línea 18: El servidor responde, y también podemos ver claramente el mensaje enviado por este.
 
-![image-20200413101620093](\imagenesP4\image-20200413101620093.png)
+![image-20200413101620093](https://github.com/diegostreetbob/SocketsSSL_TLS/blob/master/imagenesP4/image-20200413101620093.png)
 
 
 
