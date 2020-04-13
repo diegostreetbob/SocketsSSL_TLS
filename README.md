@@ -10,7 +10,7 @@
 # Name:        server.py
 # Purpose:     servidor socket ssl/tls
 # Author:      DiegoMGuillén
-# Contacto:    dmartinez17@alu.ucam.edu
+# Contacto:    
 # Created:     12/04/2020
 # Notas:
 # Testeado con Python 2.7.16
@@ -85,7 +85,7 @@ if __name__ == '__main__':
 # Name:        client.py
 # Purpose:     servidor socket ssl/tls
 # Author:      DiegoMGuillén
-# Contacto:    dmartinez17@alu.ucam.edu
+# Contacto:    
 # Created:     12/04/2020
 # Notas:
 # Testeado con Python 2.7.16
@@ -201,7 +201,7 @@ El código del servidor es este:
 # Name:        server.py
 # Purpose:     servidor socket NO seguro
 # Author:      DiegoMGuillén
-# Contacto:    dmartinez17@alu.ucam.edu
+# Contacto:    
 # Created:     13/04/2020
 # Notas:
 # Testeado con Python 3.7.6
